@@ -14,6 +14,14 @@ local.settings.json
 *.userprefs
 
 # Build results
+infrastructure/publish-functionapp/
+infrastructure/publish-functionapp.zip
+infrastructure/clear-resources.json
+Properties/PublishProfiles/
+Properties/ServiceDependencies/
+Properties/serviceDependencies.json
+Properties/serviceDependencies.zipdeployhttpfunc20240529083641 - Zip Deploy.json
+
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
