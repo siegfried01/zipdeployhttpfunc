@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34804.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zipdeployhttpfunc", "zipdeployhttpfunc.csproj", "{5A296857-3BE5-48C1-9FC8-32E3D33FCC5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A296857-3BE5-48C1-9FC8-32E3D33FCC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A296857-3BE5-48C1-9FC8-32E3D33FCC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A296857-3BE5-48C1-9FC8-32E3D33FCC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A296857-3BE5-48C1-9FC8-32E3D33FCC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38E2CD2B-305F-42BB-937E-7AD3BC65A218}
+	EndGlobalSection
+EndGlobal
