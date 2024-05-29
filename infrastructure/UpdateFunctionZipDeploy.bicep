@@ -9,7 +9,7 @@ EOF
    $env:subscriptionId=(az account show --query id --output tsv | ForEach-Object { $_ -replace "`r", ""})
    $env:name='UpdateFunctionZipDeploy'
    $env:rg="rg_$($env:name)"
-   $env:loc='eastus2'
+   $env:loc=$env:AZ_DEFAULT_LOC
    $env:uniquePrefix="$(If ($env:USERNAME -eq "v-richardsi") {"zhbov"} ElseIf ($env:USERNAME -eq "v-paperry") { "clwti" } ElseIf ($env:USERNAME -eq "hein") {"pjhcs"} Else { "zsevf" } )"
    End common prolog commands
 
@@ -66,7 +66,7 @@ EOF
 param uniquePrefix string = uniqueString(resourceGroup().id)
 
 @description('The name of the Azure Function app.')
-param functionAppName string "${uniquePrefix}-func"
+param functionAppName string = '${uniquePrefix}-func'
 
 @description('The location into which the resources should be deployed.')
 param location string = resourceGroup().location
@@ -76,7 +76,6 @@ param packageUri string
 
 resource functionAppName_ZipDeploy 'Microsoft.Web/sites/extensions@2021-02-01' = {
   name: '${functionAppName}/ZipDeploy'
-  location: location
   properties: {
     packageUri: packageUri
   }
