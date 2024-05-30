@@ -24,7 +24,7 @@ public class zipdeployhttpfunc
         dynamic data = JsonConvert.DeserializeObject(requestBody);
         name = name ?? data?.name;
 
-        string responseMessage = "Built at Wed May 29 05:50:22 2024 "+(string.IsNullOrEmpty(name)
+        string responseMessage = "Built at Thu May 30 05:58:21 2024 "+(string.IsNullOrEmpty(name)
             ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
             : $"Hello, {name}. This HTTP triggered function executed successfully.")
               + DateTime.Now.ToString("yyyy MMM dd hh:mm:ss.fff ttt (zzz)" + "");

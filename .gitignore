@@ -17,10 +17,8 @@ local.settings.json
 infrastructure/publish-functionapp/
 infrastructure/publish-functionapp.zip
 infrastructure/clear-resources.json
-Properties/PublishProfiles/
-Properties/ServiceDependencies/
+Properties/*
 Properties/serviceDependencies.json
-Properties/serviceDependencies.zipdeployhttpfunc20240529083641 - Zip Deploy.json
 
 [Dd]ebug/
 [Dd]ebugPublic/
