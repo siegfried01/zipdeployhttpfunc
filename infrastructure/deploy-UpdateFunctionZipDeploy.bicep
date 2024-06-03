@@ -123,8 +123,8 @@ EOF
    Begin commands to deploy this file using Azure CLI with PowerShell
    write-output "Step 13 generate blob SAS and deploy"
    $env:conn=(az storage account show-connection-string --name "$($env:uniquePrefix)stgacc" --resource-group $env:rg | jq '.connectionString')
-   write-output "az storage blob generate-sas --full-uri --permissions acdeimrtwx --expiry (get-date).AddMinutes(60).ToString('yyyy-MM-ddTHH:mm:ssZ') --account-name '$($env:uniquePrefix)stgacc' -c $env:stgContainer -n package_zip"
-   $env:sasUrl=(az storage blob generate-sas --full-uri --permissions acdeimrtwx --expiry (get-date).AddMinutes(60).ToString("yyyy-MM-ddTHH:mm:ssZ") --account-name "$($env:uniquePrefix)stgacc" -c $env:stgContainer -n package_zip  --connection-string $env:conn)
+   write-output "az storage blob generate-sas --full-uri --permissions acdeimrtwx --expiry (get-date).AddMinutes(60).ToString('yyyy-MM-ddTHH:mm:ssZ') --account-name '$($env:uniquePrefix)stgacc' -c $env:stgContainer -n package_zip --https-only --output tsv"
+   $env:sasUrl=(az storage blob generate-sas --full-uri --permissions acdeimrtwx --expiry (get-date).AddMinutes(60).ToString("yyyy-MM-ddTHH:mm:ssZ") --account-name "$($env:uniquePrefix)stgacc" -c $env:stgContainer -n package_zip  --connection-string $env:conn --https-only --output tsv)
    write-output "sasUrl=$($env:sasUrl)"
    $env:sasUrl =  $env:sasUrl -replace '&', '%26'
    write-output "escaped sasUrl=$($env:sasUrl)"
