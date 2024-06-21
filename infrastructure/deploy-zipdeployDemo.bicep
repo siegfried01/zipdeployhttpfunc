@@ -1,4 +1,7 @@
 /*
+   https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.web/function-app-windows-consumption/azuredeploy.json
+   zip deploy vs msdeploy https://github.com/projectkudu/kudu/wiki/MSDeploy-VS.-ZipDeploy
+
    From a (cygwin) bash prompt, use this perl one-liner to extract the powershell script fragments and exeucte them. This example shows how to execute steps 2 (shutdown) and steps 4-13 and skipping steps 7,8,9 because they don't work (yet). Adjust that list of steps according to your needs.
 
    powershell -executionPolicy unrestricted -Command - <<EOF
@@ -212,8 +215,6 @@ EOF
    End common epilog commands
 
  */
-// https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.web/function-app-windows-consumption/azuredeploy.json
-// zip deploy vs msdeploy https://github.com/projectkudu/kudu/wiki/MSDeploy-VS.-ZipDeploy
 
 @description('The name of the Azure Function app.')
 param uniquePrefix string = uniqueString(resourceGroup().id)
