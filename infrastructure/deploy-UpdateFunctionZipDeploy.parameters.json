@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "functionAppName": {
+        "value": "zsevf-func"
+      },
+      "packageUri": {
+        "value": "https://zsevfblobstg.blob.core.windows.net/mycontainer/package.zip?<SAS signature>"
+      }
+  }
+}
